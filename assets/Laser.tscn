@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Wobble"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mixdown:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 0.450625, 0.450625, 0.450625, 0.450625, 0.450625, 0.450625, 0.450625, 0.450625 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Mixdown/Polygon2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( -1, 1 ), Vector2( 1, 1 ), Vector2( -1, 1 ), Vector2( 1, 1 ), Vector2( -1, 1 ), Vector2( 1, 1 ), Vector2( -1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Mixdown/Polygon2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 1 ), Vector2( 1, 1 ), Vector2( 0.5, 1 ), Vector2( 1, 1 ), Vector2( 0.5, 1 ), Vector2( 1, 1 ), Vector2( 0.5, 1 ) ]
+}
+
+[node name="Laser" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Wobble"
+anims/Wobble = SubResource( 1 )
+
+[node name="Mixdown" type="Node2D" parent="."]
+scale = Vector2( 1.02306, 1 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Mixdown"]
+modulate = Color( 1, 1, 1, 0.266667 )
+position = Vector2( 0, -46 )
+color = Color( 0.92549, 0.164706, 0.0352941, 1 )
+antialiased = true
+polygon = PoolVector2Array( 0, -32, -4.5, -26.25, -7.39211, -19.1578, -8.45052, 38.7974, -7.74898, 43.2171, -3.25913, 47.0054, 0.950104, 47.3562, 4.87872, 46.8651, 8, 44, 8.45657, 38.6571, 7.41909, -19.4919, 4.5, -26.125 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Mixdown"]
+modulate = Color( 1, 1, 1, 0.235294 )
+position = Vector2( 0, -46 )
+color = Color( 0.92549, 0.164706, 0.0352941, 1 )
+antialiased = true
+polygon = PoolVector2Array( 0, -32, -4, -25.8125, -5.85483, -19.1496, -6.34589, -0.488617, -6.06528, 14.5945, -7.11759, 40.0602, -6.34591, 42.5156, -3.46959, 45.5322, 0.0381012, 46.3039, 4.03687, 45.5322, 6.07133, 43.2171, 7.05349, 39.8497, 6.49227, 14.0332, 6.42211, -0.558777, 5.3698, -19.0092, 4.125, -25.6875 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Mixdown"]
+position = Vector2( 0, -46 )
+color = Color( 0.745098, 0.121569, 0.235294, 1 )
+antialiased = true
+polygon = PoolVector2Array( 0, -32, -4, -24, -4, 32, -4, 44, 4, 44, 4, -24 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Mixdown"]
+position = Vector2( 0.410076, -45.941 )
+scale = Vector2( 0.777139, 1 )
+color = Color( 0.92549, 0.164706, 0.0352941, 1 )
+antialiased = true
+polygon = PoolVector2Array( -0.366695, -30.5959, -3.49327, -23.3989, -4, 32, -4, 44, -3, 44, -3, 32, -2, 32, -2, 41, -1, 41, -1, 32, 0, 32, 0, 44, 1, 44, 1, 32, 2, 32, 2, 41, 3, 41, 3, 32, 2.28795, -23.4579 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Mixdown"]
+position = Vector2( -0.0630913, -75.979 )
+scale = Vector2( 0.944285, 1 )
+color = Color( 0.705882, 0.733333, 0.807843, 1 )
+offset = Vector2( -0.100082, 29.979 )
+antialiased = true
+polygon = PoolVector2Array( -0.0746155, -26.5845, -1.13647, -24.2248, -1.1608, 2.48911, -1.43086, 17.134, -0.0142365, 43.6673, 1.66782, 17.4752, 1.81222, 2.34045, 0.869259, -24.1068 )

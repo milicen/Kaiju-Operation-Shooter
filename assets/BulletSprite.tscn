@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Wobble"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mixdown:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 0.450625, 0.450625, 0.450625, 0.450625, 0.450625, 0.450625, 0.450625, 0.450625 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1 ) ]
+}
+
+[node name="Bullet" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Wobble"
+anims/Wobble = SubResource( 1 )
+
+[node name="Mixdown" type="Node2D" parent="."]
+position = Vector2( -0.213776, -81.1071 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Mixdown"]
+color = Color( 0.705882, 0.733333, 0.807843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -8.45052, 38.7974, -7.74898, 43.2171, -3.25913, 47.0054, 0.950104, 47.3562, 4.87872, 46.8651, 8, 44, 8.45657, 38.6571, 6.81718, 23.0133, 3.52023, 14.8779, -0.358532, 11.1078, -3.84942, 14.6795, -7.3403, 23.2118 )
+
+[node name="Polygon2D6" type="Polygon2D" parent="Mixdown"]
+color = Color( 0.380392, 0.337255, 0.498039, 1 )
+antialiased = true
+polygon = PoolVector2Array( -8.45052, 38.7974, -7.74898, 43.2171, -3.25913, 47.0054, 0.950104, 47.3562, 4.87872, 46.8651, 8, 44, 8.45657, 38.6571, 5.98592, 36.8327, 3.29811, 35.9577, -1.03904, 35.9577, -4.45989, 36.8952, -2.93273, 21.0827, -1.89425, 15.7077, -1.05382, 15.0731, 0.732471, 14.8952, 2.01529, 15.5202, 3.02323, 16.1159, 6.81718, 23.0133, 3.52023, 14.8779, -0.358532, 11.1078, -3.84942, 14.6795, -7.3403, 23.2118 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Mixdown"]
+color = Color( 0.54902, 0.552941, 0.690196, 1 )
+antialiased = true
+polygon = PoolVector2Array( 3.15797, 36.6306, -0.951679, 36.4982, -4.83483, 37.4914, -6.12921, 38.6833, -4.73775, 37.7232, -0.919331, 37.0279, 3.06089, 37.061, 5.74673, 38.0211, 8.23843, 40.3056, 8.45657, 38.6571, 6.81718, 23.0133, 3.52023, 14.8779, -0.358532, 11.1078, -3.84942, 14.6795, 1.14779, 15.4902, 2.65629, 16.6999, 3.71021, 20.5308, 4.17241, 24.5341, 4.94817, 37.2332 )
+
+[node name="Polygon2D7" type="Polygon2D" parent="Mixdown"]
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+antialiased = true
+polygon = PoolVector2Array( -8.45052, 38.7974, -7.74898, 43.2171, -3.25913, 47.0054, 0.950104, 47.3562, 4.87872, 46.8651, 8, 44, 4.21442, 45.9493, 0.930618, 46.3479, -2.71238, 45.9493, -6.95133, 43.0776, -7.93203, 38.8411, -6.84236, 23.2328, -3.54809, 14.7362, -0.999607, 13.4545, 0.641796, 13.4987, 2.15362, 14.5152, 3.52023, 14.8779, -0.358532, 11.1078, -3.84942, 14.6795, -7.3403, 23.2118 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Mixdown"]
+position = Vector2( 0.175701, 79.8399 )
+scale = Vector2( 0.99257, 8 )
+amount = 4
+lifetime = 0.1
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector2( 0, 1 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 100.0

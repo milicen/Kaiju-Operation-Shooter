@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/HpBar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Enemy.cs" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 12 )
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/health-bar.png-4e6edba933d03211eab6d720d0e278f9.stex"
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"enemy",
+]]
+script = ExtResource( 2 )
+
+[node name="Body" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="LeechTimer" type="Timer" parent="."]
+
+[node name="HpBar" parent="." instance=ExtResource( 1 )]
+texture_under = SubResource( 2 )
+texture_progress = SubResource( 2 )
+tint_progress = Color( 0.701961, 0, 0, 1 )
+[connection signal="timeout" from="LeechTimer" to="." method="_on_LeechTimer_timeout"]

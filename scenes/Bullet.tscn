@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Bullet.cs" type="Script" id=1]
+[ext_resource path="res://assets/BulletSprite.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 2.0
+height = 4.0
+
+[node name="Bullet" type="Area2D" groups=[
+"bullet",
+]]
+script = ExtResource( 1 )
+speed = 300.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Bullet" parent="CollisionShape2D" instance=ExtResource( 2 )]
+modulate = Color( 0.992157, 0.780392, 0.329412, 1 )
+position = Vector2( 0, 16 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -1, 0 )
+scale = Vector2( 0.5, 0.3 )
+[connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]
+[connection signal="viewport_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_viewport_exited"]

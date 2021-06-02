@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TopDownJam/FlyingMonster1.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Sentry.cs" type="Script" id=2]
+[ext_resource path="res://TopDownJam/health-bar.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Boom"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.756863, 0.00784314, 0.482353, 0.352941 ), Color( 0.756863, 0.00784314, 0.482353, 0 ) ]
+}
+
+[node name="Sentry1" type="Sprite" groups=[
+"sentry",
+]]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 0, -53.3333 )
+
+[node name="ExplodeTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.756863, 0.00784314, 0.482353, 0 )
+position = Vector2( -8.58307e-06, -6.66666 )
+scale = Vector2( 0.47619, 4.61538 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Boom = SubResource( 1 )
+[connection signal="timeout" from="ExplodeTimer" to="." method="_on_ExplodeTimer_timeout"]

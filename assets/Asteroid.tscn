@@ -1,0 +1,112 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Asteroid.gd" type="Script" id=1]
+
+[node name="Asteroid" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="S1" type="Polygon2D" parent="."]
+visible = false
+color = Color( 0.545098, 0.160784, 0.364706, 1 )
+polygon = PoolVector2Array( 845.936, 410.816, 845.936, 410.816, 814, 412, 805, 429, 786.539, 439.1, 800, 463, 797.852, 480.113, 789.367, 516.882, 816, 525, 818, 556, 832, 559, 840.279, 569.208, 894.019, 536.681, 910.99, 481.527, 892.605, 433.444, 877, 417 )
+
+[node name="2" type="Polygon2D" parent="S1"]
+color = Color( 0.380392, 0.168627, 0.368627, 1 )
+polygon = PoolVector2Array( 845.936, 410.816, 845.936, 410.816, 816, 412, 807, 427, 786.539, 439.1, 797.852, 480.113, 789.367, 516.882, 816, 526, 819, 557, 831, 561, 840.279, 569.208, 841, 554, 854, 531, 836, 506, 838, 473, 821, 447, 834, 424, 858, 422, 871, 439, 870, 424, 886, 432, 910.99, 481.527, 892.605, 433.444, 878, 417 )
+
+[node name="4" type="Polygon2D" parent="S1"]
+color = Color( 0.380392, 0.168627, 0.368627, 1 )
+polygon = PoolVector2Array( 890, 535, 850, 556, 840, 560, 816, 526, 819, 557, 831, 561, 840.279, 569.208, 894.019, 536.681, 910.99, 481.527 )
+
+[node name="3" type="Polygon2D" parent="S1"]
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+polygon = PoolVector2Array( 827, 469, 814, 458, 812, 472, 807, 481, 820, 484, 828, 480 )
+
+[node name="5" type="Polygon2D" parent="S1"]
+position = Vector2( 15, 61 )
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+polygon = PoolVector2Array( 832, 469, 816, 467, 812, 472, 815, 480, 820, 484, 828, 480 )
+
+[node name="6" type="Polygon2D" parent="S1"]
+position = Vector2( -19, 33 )
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+polygon = PoolVector2Array( 816, 467, 814, 477, 815, 480, 822, 476, 820, 484, 828, 480, 823, 468 )
+
+[node name="7" type="Polygon2D" parent="S1"]
+position = Vector2( -21, -31 )
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+polygon = PoolVector2Array( 816, 467, 812, 472, 814, 486, 820, 484 )
+
+[node name="S2" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 11, 4 )
+color = Color( 0.545098, 0.160784, 0.364706, 1 )
+polygon = PoolVector2Array( 845.936, 410.816, 845.936, 410.816, 814, 412, 805, 429, 807, 450, 800, 463, 797.852, 480.113, 789.367, 516.882, 804, 538, 818, 556, 827, 564, 840.279, 569.208, 870, 535, 894.019, 536.681, 910.99, 481.527, 896, 460, 892.605, 433.444, 877, 417 )
+
+[node name="2" type="Polygon2D" parent="S2"]
+color = Color( 0.380392, 0.168627, 0.368627, 1 )
+polygon = PoolVector2Array( 845.936, 410.816, 845.936, 410.816, 816, 412, 807, 427, 806, 451, 797.852, 480.113, 789.367, 516.882, 819, 557, 827, 565, 840.279, 569.208, 852, 558, 869, 536, 836, 506, 838, 473, 821, 447, 834, 424, 858, 422, 870, 424, 886, 432, 895, 460, 910.99, 481.527, 892.605, 433.444, 878, 417 )
+
+[node name="4" type="Polygon2D" parent="S2"]
+color = Color( 0.380392, 0.168627, 0.368627, 1 )
+polygon = PoolVector2Array( 890, 535, 873, 536, 894.019, 536.681, 910.99, 481.527 )
+
+[node name="3" type="Polygon2D" parent="S2"]
+position = Vector2( 820, 465 )
+rotation = -2.09439
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+offset = Vector2( -819, -479 )
+polygon = PoolVector2Array( 827, 469, 814, 458, 812, 472, 807, 481, 820, 484, 828, 480 )
+
+[node name="6" type="Polygon2D" parent="S2"]
+position = Vector2( 804, 520 )
+rotation = 2.61799
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+offset = Vector2( -824, -480 )
+polygon = PoolVector2Array( 816, 467, 814, 477, 815, 480, 822, 476, 820, 484, 828, 480, 823, 468 )
+
+[node name="7" type="Polygon2D" parent="S2"]
+position = Vector2( 817, 435 )
+rotation = 0.785397
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+offset = Vector2( -816, -484 )
+polygon = PoolVector2Array( 816, 467, 812, 472, 814, 486, 820, 484 )
+
+[node name="S3" type="Polygon2D" parent="."]
+position = Vector2( -844, -486 )
+color = Color( 0.545098, 0.160784, 0.364706, 1 )
+polygon = PoolVector2Array( 845.936, 410.816, 845.936, 410.816, 814, 412, 805, 429, 786.539, 439.1, 800, 463, 797.852, 480.113, 816, 525, 818, 556, 832, 559, 840.279, 569.208, 894.019, 536.681, 910.99, 481.527, 861, 481, 892.605, 433.444, 877, 417 )
+
+[node name="2" type="Polygon2D" parent="S3"]
+color = Color( 0.380392, 0.168627, 0.368627, 1 )
+polygon = PoolVector2Array( 845.936, 410.816, 845.936, 410.816, 816, 412, 807, 427, 786.539, 439.1, 797.852, 480.113, 816, 526, 819, 557, 831, 561, 840.279, 569.208, 841, 554, 854, 531, 836, 506, 838, 473, 821, 447, 834, 424, 858, 422, 859, 431, 863, 441, 871, 445, 886, 432, 861, 481, 892.605, 433.444, 878, 417 )
+
+[node name="4" type="Polygon2D" parent="S3"]
+color = Color( 0.380392, 0.168627, 0.368627, 1 )
+polygon = PoolVector2Array( 890, 535, 850, 556, 840, 560, 816, 526, 819, 557, 831, 561, 840.279, 569.208, 894.019, 536.681, 910.99, 481.527 )
+
+[node name="3" type="Polygon2D" parent="S3"]
+position = Vector2( 820, 479 )
+rotation = 1.57079
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+offset = Vector2( -820, -479 )
+polygon = PoolVector2Array( 846, 470, 814, 464, 812, 472, 807, 481, 820, 484, 828, 480, 822, 470 )
+
+[node name="5" type="Polygon2D" parent="S3"]
+position = Vector2( 869, 432.176 )
+scale = Vector2( 1, 1.11765 )
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+offset = Vector2( -820, -477 )
+polygon = PoolVector2Array( 832, 469, 816, 467, 812, 472, 815, 480, 820, 484, 828, 480 )
+
+[node name="6" type="Polygon2D" parent="S3"]
+position = Vector2( 8, 69 )
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+polygon = PoolVector2Array( 816, 467, 814, 477, 815, 480, 822, 476, 820, 484, 828, 480, 823, 468 )
+
+[node name="7" type="Polygon2D" parent="S3"]
+position = Vector2( 799, 446 )
+rotation = 0.523598
+color = Color( 0.215686, 0.141176, 0.282353, 1 )
+offset = Vector2( -817, -481 )
+polygon = PoolVector2Array( 816, 467, 812, 472, 814, 486, 820, 484 )

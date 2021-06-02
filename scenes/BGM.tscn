@@ -1,0 +1,26 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://musics/Void Theme/Bullet Hell Out of the Void cut.ogg" type="AudioStream" id=1]
+[ext_resource path="res://musics/Void Theme/Bullet Hell Entering the Void cut.ogg" type="AudioStream" id=2]
+[ext_resource path="res://musics/Void Theme/Bullet Hell Throught the Void cut.ogg" type="AudioStream" id=3]
+[ext_resource path="res://musics/Main Theme/Bullet Hell Gameplay cut.ogg" type="AudioStream" id=4]
+[ext_resource path="res://musics/Boss Theme/Bullet Hell Boss Intro cut .ogg" type="AudioStream" id=5]
+[ext_resource path="res://musics/Boss Theme/Bullet Hell Victory ending cut.ogg" type="AudioStream" id=6]
+[ext_resource path="res://musics/Boss Theme/Bullet Hell Boss Theme gameplay cut .ogg" type="AudioStream" id=7]
+[ext_resource path="res://scripts/BGM.cs" type="Script" id=8]
+[ext_resource path="res://sfx/VA + noise radio edit.wav" type="AudioStream" id=9]
+
+[node name="BGM" type="Node"]
+script = ExtResource( 8 )
+oceanLoop = ExtResource( 4 )
+voidLoop = ExtResource( 3 )
+voidEnter = ExtResource( 2 )
+voidOut = ExtResource( 1 )
+bossEnter = ExtResource( 5 )
+bossLoop = ExtResource( 7 )
+victory = ExtResource( 6 )
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Intro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )

@@ -1,0 +1,7 @@
+*.json
+*.cfg
+*.import
+
+.vscode
+.mono
+.import

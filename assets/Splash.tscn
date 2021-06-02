@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Mech.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Plane.tscn" type="PackedScene" id=2]
+[ext_resource path="res://background/Ocean.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Charger.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Drainer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/BossAnim.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/BulletSprite.tscn" type="PackedScene" id=7]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Ocean" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.564706, 0.776471, 0.666667, 1 )
+position = Vector2( -62, 62 )
+
+[node name="Boss" parent="." instance=ExtResource( 6 )]
+position = Vector2( 424.714, 140.449 )
+rotation = 3.14159
+
+[node name="Mech" parent="." instance=ExtResource( 1 )]
+position = Vector2( 428.714, 390.449 )
+
+[node name="Plane" parent="." instance=ExtResource( 2 )]
+position = Vector2( 264.715, 320.449 )
+rotation = 0.743623
+
+[node name="Bullet" parent="Plane" instance=ExtResource( 7 )]
+modulate = Color( 0.996078, 0.701961, 0.439216, 1 )
+position = Vector2( -2.93793, -42.5862 )
+rotation = 0.0384114
+scale = Vector2( 0.666667, 0.666667 )
+
+[node name="Bullet2" parent="Plane" instance=ExtResource( 7 )]
+modulate = Color( 0.996078, 0.701961, 0.439216, 1 )
+position = Vector2( 3.6496, -143.751 )
+rotation = 0.0384114
+scale = Vector2( 0.666667, 0.666667 )
+
+[node name="Bullet3" parent="Plane" instance=ExtResource( 7 )]
+modulate = Color( 0.996078, 0.701961, 0.439216, 1 )
+position = Vector2( 7.19342, -228.53 )
+rotation = 0.0384114
+scale = Vector2( 0.666667, 0.666667 )
+
+[node name="Charger" parent="." instance=ExtResource( 4 )]
+position = Vector2( 572.714, 210.449 )
+rotation = -1.75312
+
+[node name="Bullet4" parent="Charger" instance=ExtResource( 7 )]
+modulate = Color( 0.996078, 0.701961, 0.439216, 1 )
+position = Vector2( 2.50977, -50.3798 )
+rotation = -0.0480821
+scale = Vector2( 0.666667, 0.666667 )
+
+[node name="Bullet5" parent="Charger" instance=ExtResource( 7 )]
+modulate = Color( 0.996078, 0.701961, 0.439216, 1 )
+position = Vector2( 1.22876, -135.354 )
+rotation = -0.0480821
+scale = Vector2( 0.666667, 0.666667 )
+
+[node name="Charger2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 272.714, 84.4489 )
+rotation = -3.03467
+
+[node name="Bullet4" parent="Charger2" instance=ExtResource( 7 )]
+modulate = Color( 0.996078, 0.701961, 0.439216, 1 )
+position = Vector2( 2.50977, -50.3798 )
+rotation = -0.0480821
+scale = Vector2( 0.666667, 0.666667 )
+
+[node name="Bullet5" parent="Charger2" instance=ExtResource( 7 )]
+modulate = Color( 0.996078, 0.701961, 0.439216, 1 )
+position = Vector2( 1.22876, -135.354 )
+rotation = -0.0480821
+scale = Vector2( 0.666667, 0.666667 )
+
+[node name="Drainer" parent="." instance=ExtResource( 5 )]
+position = Vector2( 528.715, 402.449 )
+rotation = -0.81564
+
+[node name="Drainer2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 256.715, 434.449 )
+rotation = 1.28303
+
+[node name="Drainer3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 166.715, 236.449 )
+rotation = 1.81299
